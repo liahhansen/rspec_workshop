@@ -1,0 +1,29 @@
+
+<table>
+	<% odd_even = 0 %>
+  <tr>
+    <th>First Name:</th>
+    <th>Last Name:</th>
+    <th>Image:</th>
+    <th>Wish List:</th>
+    <th colspan="3"></th>
+
+  </tr>
+
+<% @users.each do |user| %>
+<% 
+	odd_even = 1 - odd_even
+%>
+  <tr class="listline<%=odd_even %>">
+	
+    <td><%=h user.first_name %></td>
+    <td><%=h user.last_name %></td>
+    <td><%=h user.image %></td>
+    <td><%=h user.wish_list %></td>
+    
+    <td><%= link_to 'Destroy', :action => "destroy", :id => user,  :method => :delete %></td>
+
+	
+  </tr>
+<% end %>
+</table>

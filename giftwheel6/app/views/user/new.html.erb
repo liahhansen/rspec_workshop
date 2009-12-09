@@ -1,0 +1,38 @@
+<h2>Add a person to your Giftwheel</h2>
+<% form_for :user do |form| %>
+	<fieldset>
+		<legend>Enter Your Details</legend>
+		<%= error_messages_for "user" %>
+			<div class="form_container">
+				<div class="form_row">
+					<label for='first_name'>First Name:</label>
+					<%= form.text_field :first_name, :size => 40, :maxlength  => 40 %>
+					<br />	
+				</div>
+				<div class="form_row">
+					<label for='last_name'>Last Name:</label>
+					<%= form.text_field :last_name, :size => 40, :maxlength  => 40 %>
+					<br />	
+				</div>
+				<div class="form_row">
+					<label for='position'>Position:</label>
+					<%= form.text_field :position, :size => 40, :maxlength  => 40 %>
+					<br />	
+				</div>
+				<div class="form_row">
+					<label for='image'>Image:</label>
+					<%= form.text_field :image, :size => 40, :maxlength  => 40 %>
+					<br />	
+				</div>
+				<div class="form_row">
+					<label for='wish_list'>Wish List:</label>
+					<%= form.text_field :wish_list, :size => 40, :maxlength  => 40 %>
+					<br />	
+				</div>
+
+				<div class="form_row">
+				<%= submit_tag "Add!", :class  => "submit" %>
+				</div>
+			</div>
+	</fieldset>	
+<% end %>
