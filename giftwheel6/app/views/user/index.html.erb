@@ -10,6 +10,10 @@
 <% @users.each do |user| %>
     <div class="inner<%= user.position %>"><%=h user.first_name + " " + user.last_name %></div>
 <% end %>
-<%= button_to "Spin Wheel",  :action => :spin %>
 
+
+</div>
+<div id="spin-wheel">
+    <%= button_to "Spin Wheel",  :action => :spin %>
+    
 </div>
